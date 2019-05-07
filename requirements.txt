@@ -2,5 +2,7 @@ ggplot
 matplotlib
 numpy
 pandas
+pandas_profiling
+plotly
 seaborn
 scikit-learn
