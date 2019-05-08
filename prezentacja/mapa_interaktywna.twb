@@ -1,0 +1,1857 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0213.2333                               -->
+<workbook original-version='18.1' source-build='2019.1.0 (20191.19.0213.2333)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <Heatmap />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Arkusz1 (Wspolrzedne)' inline='true' name='federated.173pbqz0cou74v1egr11z0yli11o' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Wspolrzedne' name='excel-direct.0wvea0r07j16g816uz8ki0hd0x52'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/Wspolrzedne.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='dane' name='excel-direct.0mwh7851fx89dx16r9ohx1008kv0'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/dane.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='dane1' name='excel-direct.0lzmt2l1waensk1cfr14o0tpd2n3'>
+            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/dane1.xlsx' interpretationMode='0' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation join='full' type='join'>
+          <clause type='join'>
+            <expression op='='>
+              <expression op='[współrzędne].[City]' />
+              <expression op='[dane1].[city]' />
+            </expression>
+          </clause>
+          <relation join='full' type='join'>
+            <clause type='join'>
+              <expression op='='>
+                <expression op='[współrzędne].[City]' />
+                <expression op='[dane].[city]' />
+              </expression>
+            </clause>
+            <relation connection='excel-direct.0wvea0r07j16g816uz8ki0hd0x52' name='współrzędne' table='[Arkusz1$]' type='table'>
+              <columns gridOrigin='A1:E6:no:A1:E6:0' header='yes' outcome='6'>
+                <column datatype='string' name='Country (Name)' ordinal='0' />
+                <column datatype='string' name='State/Province' ordinal='1' />
+                <column datatype='string' name='City' ordinal='2' />
+                <column datatype='string' name='Latitude' ordinal='3' />
+                <column datatype='string' name='Longitude' ordinal='4' />
+              </columns>
+            </relation>
+            <relation connection='excel-direct.0mwh7851fx89dx16r9ohx1008kv0' name='dane' table='[dane$]' type='table'>
+              <columns gridOrigin='A1:AE3656:no:A1:AE3656:0' header='yes' outcome='2'>
+                <column datatype='integer' name='F1' ordinal='0' />
+                <column datatype='string' name='city' ordinal='1' />
+                <column datatype='date' name='date' ordinal='2' />
+                <column datatype='integer' name='year' ordinal='3' />
+                <column datatype='integer' name='month' ordinal='4' />
+                <column datatype='integer' name='day' ordinal='5' />
+                <column datatype='real' name='high_temp' ordinal='6' />
+                <column datatype='real' name='avg_temp' ordinal='7' />
+                <column datatype='real' name='low_temp' ordinal='8' />
+                <column datatype='real' name='high_dewpt' ordinal='9' />
+                <column datatype='real' name='avg_dewpt' ordinal='10' />
+                <column datatype='real' name='low_dewpt' ordinal='11' />
+                <column datatype='integer' name='high_humidity' ordinal='12' />
+                <column datatype='integer' name='avg_humidity' ordinal='13' />
+                <column datatype='integer' name='low_humidity' ordinal='14' />
+                <column datatype='real' name='high_hg' ordinal='15' />
+                <column datatype='real' name='avg_hg' ordinal='16' />
+                <column datatype='real' name='low_hg' ordinal='17' />
+                <column datatype='real' name='high_vis' ordinal='18' />
+                <column datatype='real' name='avg_vis' ordinal='19' />
+                <column datatype='real' name='low_vis' ordinal='20' />
+                <column datatype='real' name='high_wind' ordinal='21' />
+                <column datatype='real' name='avg_wind' ordinal='22' />
+                <column datatype='real' name='max_wind_gust' ordinal='23' />
+                <column datatype='real' name='precip' ordinal='24' />
+                <column datatype='string' name='events' ordinal='25' />
+                <column datatype='integer' name='Rain' ordinal='26' />
+                <column datatype='integer' name='Fog' ordinal='27' />
+                <column datatype='integer' name='Thunderstorm' ordinal='28' />
+                <column datatype='integer' name='Snow' ordinal='29' />
+                <column datatype='integer' name='Hail' ordinal='30' />
+              </columns>
+            </relation>
+          </relation>
+          <relation connection='excel-direct.0lzmt2l1waensk1cfr14o0tpd2n3' name='dane1' table='[dane$]' type='table'>
+            <columns gridOrigin='A1:AD3656:no:A1:AD3656:0' header='yes' outcome='6'>
+              <column datatype='string' name='city' ordinal='0' />
+              <column datatype='date' name='date' ordinal='1' />
+              <column datatype='integer' name='year' ordinal='2' />
+              <column datatype='integer' name='month' ordinal='3' />
+              <column datatype='integer' name='day' ordinal='4' />
+              <column datatype='real' name='high_temp' ordinal='5' />
+              <column datatype='real' name='avg_temp' ordinal='6' />
+              <column datatype='real' name='low_temp' ordinal='7' />
+              <column datatype='real' name='high_dewpt' ordinal='8' />
+              <column datatype='real' name='avg_dewpt' ordinal='9' />
+              <column datatype='real' name='low_dewpt' ordinal='10' />
+              <column datatype='integer' name='high_humidity' ordinal='11' />
+              <column datatype='integer' name='avg_humidity' ordinal='12' />
+              <column datatype='integer' name='low_humidity' ordinal='13' />
+              <column datatype='real' name='high_hg' ordinal='14' />
+              <column datatype='real' name='avg_hg' ordinal='15' />
+              <column datatype='real' name='low_hg' ordinal='16' />
+              <column datatype='real' name='high_vis' ordinal='17' />
+              <column datatype='real' name='avg_vis' ordinal='18' />
+              <column datatype='real' name='low_vis' ordinal='19' />
+              <column datatype='real' name='high_wind' ordinal='20' />
+              <column datatype='real' name='avg_wind' ordinal='21' />
+              <column datatype='real' name='max_wind_gust' ordinal='22' />
+              <column datatype='real' name='precip' ordinal='23' />
+              <column datatype='string' name='events' ordinal='24' />
+              <column datatype='integer' name='Rain' ordinal='25' />
+              <column datatype='integer' name='Fog' ordinal='26' />
+              <column datatype='integer' name='Thunderstorm' ordinal='27' />
+              <column datatype='integer' name='Snow' ordinal='28' />
+              <column datatype='integer' name='Hail' ordinal='29' />
+            </columns>
+          </relation>
+        </relation>
+        <cols>
+          <map key='[City]' value='[współrzędne].[City]' />
+          <map key='[Country (Name)]' value='[współrzędne].[Country (Name)]' />
+          <map key='[F1]' value='[dane].[F1]' />
+          <map key='[Fog (dane1)]' value='[dane1].[Fog]' />
+          <map key='[Fog]' value='[dane].[Fog]' />
+          <map key='[Hail (dane1)]' value='[dane1].[Hail]' />
+          <map key='[Hail]' value='[dane].[Hail]' />
+          <map key='[Latitude]' value='[współrzędne].[Latitude]' />
+          <map key='[Longitude]' value='[współrzędne].[Longitude]' />
+          <map key='[Rain (dane1)]' value='[dane1].[Rain]' />
+          <map key='[Rain]' value='[dane].[Rain]' />
+          <map key='[Snow (dane1)]' value='[dane1].[Snow]' />
+          <map key='[Snow]' value='[dane].[Snow]' />
+          <map key='[State/Province]' value='[współrzędne].[State/Province]' />
+          <map key='[Thunderstorm (dane1)]' value='[dane1].[Thunderstorm]' />
+          <map key='[Thunderstorm]' value='[dane].[Thunderstorm]' />
+          <map key='[avg_dewpt (dane1)]' value='[dane1].[avg_dewpt]' />
+          <map key='[avg_dewpt]' value='[dane].[avg_dewpt]' />
+          <map key='[avg_hg (dane1)]' value='[dane1].[avg_hg]' />
+          <map key='[avg_hg]' value='[dane].[avg_hg]' />
+          <map key='[avg_humidity (dane1)]' value='[dane1].[avg_humidity]' />
+          <map key='[avg_humidity]' value='[dane].[avg_humidity]' />
+          <map key='[avg_temp (dane1)]' value='[dane1].[avg_temp]' />
+          <map key='[avg_temp]' value='[dane].[avg_temp]' />
+          <map key='[avg_vis (dane1)]' value='[dane1].[avg_vis]' />
+          <map key='[avg_vis]' value='[dane].[avg_vis]' />
+          <map key='[avg_wind (dane1)]' value='[dane1].[avg_wind]' />
+          <map key='[avg_wind]' value='[dane].[avg_wind]' />
+          <map key='[city (dane1)]' value='[dane1].[city]' />
+          <map key='[city]' value='[dane].[city]' />
+          <map key='[date (dane1)]' value='[dane1].[date]' />
+          <map key='[date]' value='[dane].[date]' />
+          <map key='[day (dane1)]' value='[dane1].[day]' />
+          <map key='[day]' value='[dane].[day]' />
+          <map key='[events (dane1)]' value='[dane1].[events]' />
+          <map key='[events]' value='[dane].[events]' />
+          <map key='[high_dewpt (dane1)]' value='[dane1].[high_dewpt]' />
+          <map key='[high_dewpt]' value='[dane].[high_dewpt]' />
+          <map key='[high_hg (dane1)]' value='[dane1].[high_hg]' />
+          <map key='[high_hg]' value='[dane].[high_hg]' />
+          <map key='[high_humidity (dane1)]' value='[dane1].[high_humidity]' />
+          <map key='[high_humidity]' value='[dane].[high_humidity]' />
+          <map key='[high_temp (dane1)]' value='[dane1].[high_temp]' />
+          <map key='[high_temp]' value='[dane].[high_temp]' />
+          <map key='[high_vis (dane1)]' value='[dane1].[high_vis]' />
+          <map key='[high_vis]' value='[dane].[high_vis]' />
+          <map key='[high_wind (dane1)]' value='[dane1].[high_wind]' />
+          <map key='[high_wind]' value='[dane].[high_wind]' />
+          <map key='[low_dewpt (dane1)]' value='[dane1].[low_dewpt]' />
+          <map key='[low_dewpt]' value='[dane].[low_dewpt]' />
+          <map key='[low_hg (dane1)]' value='[dane1].[low_hg]' />
+          <map key='[low_hg]' value='[dane].[low_hg]' />
+          <map key='[low_humidity (dane1)]' value='[dane1].[low_humidity]' />
+          <map key='[low_humidity]' value='[dane].[low_humidity]' />
+          <map key='[low_temp (dane1)]' value='[dane1].[low_temp]' />
+          <map key='[low_temp]' value='[dane].[low_temp]' />
+          <map key='[low_vis (dane1)]' value='[dane1].[low_vis]' />
+          <map key='[low_vis]' value='[dane].[low_vis]' />
+          <map key='[max_wind_gust (dane1)]' value='[dane1].[max_wind_gust]' />
+          <map key='[max_wind_gust]' value='[dane].[max_wind_gust]' />
+          <map key='[month (dane1)]' value='[dane1].[month]' />
+          <map key='[month]' value='[dane].[month]' />
+          <map key='[precip (dane1)]' value='[dane1].[precip]' />
+          <map key='[precip]' value='[dane].[precip]' />
+          <map key='[year (dane1)]' value='[dane1].[year]' />
+          <map key='[year]' value='[dane].[year]' />
+        </cols>
+        <metadata-records>
+          <metadata-record class='column'>
+            <remote-name>Country (Name)</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Country (Name)]</local-name>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias>Country (Name)</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>State/Province</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[State/Province]</local-name>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias>State/Province</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>City</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[City]</local-name>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias>City</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Latitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Latitude]</local-name>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias>Latitude</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Longitude</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Longitude]</local-name>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias>Longitude</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[współrzędne]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:E6:no:A1:E6:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>F1</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[F1]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>F1</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[city]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_temp]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_temp</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_temp]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_temp</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_temp]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>low_temp</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_dewpt]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_dewpt</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dewpt]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_dewpt</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_dewpt]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>low_dewpt</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[high_humidity]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_humidity</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_humidity]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_humidity</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[low_humidity]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>low_humidity</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_hg]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_hg</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_hg]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_hg</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_hg]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>low_hg</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_vis]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_vis</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_vis]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_vis</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_vis]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>low_vis</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_wind</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_wind]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>high_wind</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_wind</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_wind]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>avg_wind</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_wind_gust</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_wind_gust]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>max_wind_gust</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>precip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[precip]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>precip</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>events</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[events]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>events</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rain</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rain]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>Rain</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fog</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fog]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>Fog</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Thunderstorm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Thunderstorm]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>Thunderstorm</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Snow</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Snow]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>Snow</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hail</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Hail]</local-name>
+            <parent-name>[dane]</parent-name>
+            <remote-alias>Hail</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dane]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AE3656:no:A1:AE3656:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>2</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>city</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[city (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>city</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[date (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>date</remote-alias>
+            <ordinal>37</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>year</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[year (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>year</remote-alias>
+            <ordinal>38</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>month</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[month (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>month</remote-alias>
+            <ordinal>39</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>day</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[day (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>day</remote-alias>
+            <ordinal>40</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_temp (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_temp</remote-alias>
+            <ordinal>41</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_temp (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_temp</remote-alias>
+            <ordinal>42</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_temp</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_temp (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>low_temp</remote-alias>
+            <ordinal>43</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_dewpt (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_dewpt</remote-alias>
+            <ordinal>44</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_dewpt (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_dewpt</remote-alias>
+            <ordinal>45</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_dewpt</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_dewpt (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>low_dewpt</remote-alias>
+            <ordinal>46</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[high_humidity (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_humidity</remote-alias>
+            <ordinal>47</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[avg_humidity (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_humidity</remote-alias>
+            <ordinal>48</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_humidity</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[low_humidity (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>low_humidity</remote-alias>
+            <ordinal>49</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_hg (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_hg</remote-alias>
+            <ordinal>50</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_hg (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_hg</remote-alias>
+            <ordinal>51</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_hg</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_hg (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>low_hg</remote-alias>
+            <ordinal>52</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_vis (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_vis</remote-alias>
+            <ordinal>53</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_vis (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_vis</remote-alias>
+            <ordinal>54</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>low_vis</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[low_vis (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>low_vis</remote-alias>
+            <ordinal>55</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>high_wind</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[high_wind (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>high_wind</remote-alias>
+            <ordinal>56</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>avg_wind</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[avg_wind (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>avg_wind</remote-alias>
+            <ordinal>57</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>max_wind_gust</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[max_wind_gust (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>max_wind_gust</remote-alias>
+            <ordinal>58</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>precip</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[precip (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>precip</remote-alias>
+            <ordinal>59</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>events</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[events (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>events</remote-alias>
+            <ordinal>60</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LPL_RPL_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Rain</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Rain (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>Rain</remote-alias>
+            <ordinal>61</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Fog</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Fog (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>Fog</remote-alias>
+            <ordinal>62</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Thunderstorm</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Thunderstorm (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>Thunderstorm</remote-alias>
+            <ordinal>63</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Snow</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Snow (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>Snow</remote-alias>
+            <ordinal>64</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Hail</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Hail (dane1)]</local-name>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias>Hail</remote-alias>
+            <ordinal>65</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[dane1]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AD3656:no:A1:AD3656:0&quot;</attribute>
+              <attribute datatype='boolean' name='header'>true</attribute>
+              <attribute datatype='integer' name='outcome'>6</attribute>
+            </attributes>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='ciśnienie[hPa]' datatype='real' name='[Calculation_1847038853453783040]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[avg_hg]/2.54*33.8638' />
+      </column>
+      <column caption='widoczność[km]' datatype='real' name='[Calculation_1847038853454962689]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[avg_vis]/1000' />
+      </column>
+      <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+        <semantic-values semantic-role='[Geographical].[Latitude]'>
+          <semantic-value key='&quot;Beijing&quot;' value='39.549999999999997' />
+        </semantic-values>
+        <semantic-values semantic-role='[Geographical].[Longitude]'>
+          <semantic-value key='&quot;Beijing&quot;' value='116.23' />
+        </semantic-values>
+      </column>
+      <column datatype='string' name='[Country (Name)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+        <semantic-values semantic-role='[Country].[Name]'>
+          <semantic-value key='&quot;New Zeeland&quot;' value='&quot;New Zealand&quot;' />
+          <semantic-value key='&quot;New Zeland&quot;' value='&quot;New Zealand&quot;' />
+        </semantic-values>
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+      <column caption='punkt rosy[st. C] (dane1)' datatype='real' name='[avg_dewpt (dane1)]' role='measure' type='quantitative' />
+      <column caption='punkt rosy[st. C]' datatype='real' name='[avg_dewpt]' role='dimension' type='ordinal' />
+      <column caption='ciśnienie[hPa] (dane1)' datatype='real' name='[avg_hg (dane1)]' role='measure' type='quantitative' />
+      <column caption='ciśnienie[cm sł Hg]' datatype='real' name='[avg_hg]' role='dimension' type='ordinal' />
+      <column caption='wilgotność[%] (dane1)' datatype='integer' name='[avg_humidity (dane1)]' role='measure' type='quantitative' />
+      <column caption='wilgotność[%]' datatype='integer' name='[avg_humidity]' role='measure' type='quantitative' />
+      <column caption='temperatura[st. C] (dane1)' datatype='real' name='[avg_temp (dane1)]' role='measure' type='quantitative' />
+      <column caption='temperatura[st. C]' datatype='real' name='[avg_temp]' role='dimension' type='ordinal' />
+      <column caption='widoczność[km] (dane1)' datatype='real' name='[avg_vis (dane1)]' role='measure' type='quantitative' />
+      <column caption='widoczność[m]' datatype='real' name='[avg_vis]' role='dimension' type='ordinal' />
+      <column caption='prędkość wiatru[km/h] (dane1)' datatype='real' name='[avg_wind (dane1)]' role='measure' type='quantitative' />
+      <column caption='prędkość wiatru[km/h]' datatype='real' name='[avg_wind]' role='dimension' type='ordinal' />
+      <column datatype='string' name='[city (dane1)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
+      <column datatype='integer' name='[day (dane1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[day]' role='dimension' type='quantitative' />
+      <column caption='największy podmuch wiatru[km/h] (dane1)' datatype='real' name='[max_wind_gust (dane1)]' role='measure' type='quantitative' />
+      <column caption='największy podmuch wiatru[km/h]' datatype='real' name='[max_wind_gust]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[month (dane1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[month]' role='dimension' type='quantitative' />
+      <column caption='opady[mm] (dane1)' datatype='real' name='[precip (dane1)]' role='measure' type='quantitative' />
+      <column caption='opady[mm]' datatype='real' name='[precip]' role='measure' type='quantitative' />
+      <column datatype='integer' name='[year (dane1)]' role='dimension' type='quantitative' />
+      <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
+      <drill-paths>
+        <drill-path name='Country (Name), State/Province, City'>
+          <field>[Country (Name)]</field>
+          <field>[State/Province]</field>
+          <field>[City]</field>
+        </drill-path>
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.714106' measure-ordering='alphabetic' measure-percentage='0.285894' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Poland&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <field-sort-info field-sort-order-type='custom-order'>
+        <field-sort-custom-order field='F1' />
+        <field-sort-custom-order field='city' />
+        <field-sort-custom-order field='date' />
+        <field-sort-custom-order field='year' />
+        <field-sort-custom-order field='month' />
+        <field-sort-custom-order field='day' />
+        <field-sort-custom-order field='high_temp' />
+        <field-sort-custom-order field='avg_temp' />
+        <field-sort-custom-order field='low_temp' />
+        <field-sort-custom-order field='high_dewpt' />
+        <field-sort-custom-order field='avg_dewpt' />
+        <field-sort-custom-order field='low_dewpt' />
+        <field-sort-custom-order field='high_humidity' />
+        <field-sort-custom-order field='avg_humidity' />
+        <field-sort-custom-order field='low_humidity' />
+        <field-sort-custom-order field='high_hg' />
+        <field-sort-custom-order field='avg_hg' />
+        <field-sort-custom-order field='Calculation_1847038853453783040' />
+        <field-sort-custom-order field='low_hg' />
+        <field-sort-custom-order field='high_vis' />
+        <field-sort-custom-order field='avg_vis' />
+        <field-sort-custom-order field='Calculation_1847038853454962689' />
+        <field-sort-custom-order field='low_vis' />
+        <field-sort-custom-order field='high_wind' />
+        <field-sort-custom-order field='avg_wind' />
+        <field-sort-custom-order field='max_wind_gust' />
+        <field-sort-custom-order field='precip' />
+        <field-sort-custom-order field='events' />
+        <field-sort-custom-order field='Rain' />
+        <field-sort-custom-order field='Fog' />
+        <field-sort-custom-order field='Thunderstorm' />
+        <field-sort-custom-order field='Snow' />
+        <field-sort-custom-order field='Hail' />
+        <field-sort-custom-order field='Country (Name)' />
+        <field-sort-custom-order field='State/Province' />
+        <field-sort-custom-order field='City' />
+        <field-sort-custom-order field='Latitude' />
+        <field-sort-custom-order field='Longitude' />
+        <field-sort-custom-order field='city (dane1)' />
+        <field-sort-custom-order field='date (dane1)' />
+        <field-sort-custom-order field='year (dane1)' />
+        <field-sort-custom-order field='month (dane1)' />
+        <field-sort-custom-order field='day (dane1)' />
+        <field-sort-custom-order field='high_temp (dane1)' />
+        <field-sort-custom-order field='avg_temp (dane1)' />
+        <field-sort-custom-order field='low_temp (dane1)' />
+        <field-sort-custom-order field='high_dewpt (dane1)' />
+        <field-sort-custom-order field='avg_dewpt (dane1)' />
+        <field-sort-custom-order field='low_dewpt (dane1)' />
+        <field-sort-custom-order field='high_humidity (dane1)' />
+        <field-sort-custom-order field='avg_humidity (dane1)' />
+        <field-sort-custom-order field='low_humidity (dane1)' />
+        <field-sort-custom-order field='high_hg (dane1)' />
+        <field-sort-custom-order field='avg_hg (dane1)' />
+        <field-sort-custom-order field='low_hg (dane1)' />
+        <field-sort-custom-order field='high_vis (dane1)' />
+        <field-sort-custom-order field='avg_vis (dane1)' />
+        <field-sort-custom-order field='low_vis (dane1)' />
+        <field-sort-custom-order field='high_wind (dane1)' />
+        <field-sort-custom-order field='avg_wind (dane1)' />
+        <field-sort-custom-order field='max_wind_gust (dane1)' />
+        <field-sort-custom-order field='precip (dane1)' />
+        <field-sort-custom-order field='events (dane1)' />
+        <field-sort-custom-order field='Rain (dane1)' />
+        <field-sort-custom-order field='Fog (dane1)' />
+        <field-sort-custom-order field='Thunderstorm (dane1)' />
+        <field-sort-custom-order field='Snow (dane1)' />
+        <field-sort-custom-order field='Hail (dane1)' />
+      </field-sort-info>
+    </datasource>
+  </datasources>
+  <mapsources>
+    <mapsource name='Tableau' />
+  </mapsources>
+  <worksheets>
+    <worksheet name='Sheet 1'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true'>Mapa z danymi</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Arkusz1 (Wspolrzedne)' name='federated.173pbqz0cou74v1egr11z0yli11o' />
+          </datasources>
+          <mapsources>
+            <mapsource name='Tableau' />
+          </mapsources>
+          <datasource-dependencies datasource='federated.173pbqz0cou74v1egr11z0yli11o'>
+            <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
+              <semantic-values semantic-role='[Geographical].[Latitude]'>
+                <semantic-value key='&quot;Beijing&quot;' value='39.549999999999997' />
+              </semantic-values>
+              <semantic-values semantic-role='[Geographical].[Longitude]'>
+                <semantic-value key='&quot;Beijing&quot;' value='116.23' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[Country (Name)]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal'>
+              <semantic-values semantic-role='[Country].[Name]'>
+                <semantic-value key='&quot;New Zeeland&quot;' value='&quot;New Zealand&quot;' />
+                <semantic-value key='&quot;New Zeland&quot;' value='&quot;New Zealand&quot;' />
+              </semantic-values>
+            </column>
+            <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
+            <column-instance column='[avg_dewpt (dane1)]' derivation='Avg' name='[avg:avg_dewpt (dane1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_hg (dane1)]' derivation='Avg' name='[avg:avg_hg (dane1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_temp (dane1)]' derivation='Avg' name='[avg:avg_temp (dane1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_vis (dane1)]' derivation='Avg' name='[avg:avg_vis (dane1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_wind (dane1)]' derivation='Avg' name='[avg:avg_wind (dane1):qk]' pivot='key' type='quantitative' />
+            <column-instance column='[precip (dane1)]' derivation='Avg' name='[avg:precip (dane1):qk]' pivot='key' type='quantitative' />
+            <column caption='punkt rosy[st. C] (dane1)' datatype='real' name='[avg_dewpt (dane1)]' role='measure' type='quantitative' />
+            <column caption='ciśnienie[hPa] (dane1)' datatype='real' name='[avg_hg (dane1)]' role='measure' type='quantitative' />
+            <column caption='temperatura[st. C] (dane1)' datatype='real' name='[avg_temp (dane1)]' role='measure' type='quantitative' />
+            <column caption='widoczność[km] (dane1)' datatype='real' name='[avg_vis (dane1)]' role='measure' type='quantitative' />
+            <column caption='prędkość wiatru[km/h] (dane1)' datatype='real' name='[avg_wind (dane1)]' role='measure' type='quantitative' />
+            <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Country (Name)]' derivation='None' name='[none:Country (Name):nk]' pivot='key' type='nominal' />
+            <column-instance column='[State/Province]' derivation='None' name='[none:State/Province:nk]' pivot='key' type='nominal' />
+            <column caption='opady[mm] (dane1)' datatype='real' name='[precip (dane1)]' role='measure' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='0' field='[federated.173pbqz0cou74v1egr11z0yli11o].[Longitude (generated)]' field-type='quantitative' max='-16610055.852470122' min='-61595580.339159779' projection='EPSG:3857' range-type='fixed' scope='cols' type='space' />
+            <encoding attr='space' class='0' field='[federated.173pbqz0cou74v1egr11z0yli11o].[Latitude (generated)]' field-type='quantitative' max='17466747.245071653' min='-8239266.7473224513' projection='EPSG:3857' range-type='fixed' scope='rows' type='space' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='color' field='[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]' value='#000000' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='background-color' field='[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]' value='#f20a0a' />
+          </style-rule>
+          <style-rule element='pane'>
+            <format attr='background-color' data-class='subtotal' scope='rows' value='#00ff7f' />
+          </style-rule>
+          <style-rule element='table'>
+            <format attr='background-color' value='#ffffff' />
+          </style-rule>
+          <style-rule element='map-layer'>
+            <format attr='enabled' id='tab_base' value='true' />
+            <format attr='enabled' id='um_lcover' value='true' />
+            <format attr='enabled' id='tab_coastline' value='false' />
+            <format attr='enabled' id='pp2_line' value='false' />
+            <format attr='enabled' id='light_adm0_bnd' value='false' />
+            <format attr='enabled' id='light_adm0_lbl' value='false' />
+            <format attr='enabled' id='um_adm0_bnd' value='true' />
+            <format attr='enabled' id='um_adm0_lbl' value='true' />
+            <format attr='enabled' id='light_pp2_statebounds' value='false' />
+            <format attr='enabled' id='light_pp2_statelabels' value='false' />
+            <format attr='enabled' id='pp2_adminlabels' value='false' />
+            <format attr='enabled' id='pp2_statebounds' value='true' />
+            <format attr='enabled' id='pp2_statelabels' value='true' />
+            <format attr='enabled' id='countybounds' value='false' />
+            <format attr='enabled' id='countylabels' value='false' />
+            <format attr='enabled' id='zipbounds' value='false' />
+            <format attr='enabled' id='ziplabels' value='false' />
+            <format attr='enabled' id='tab_areabounds' value='false' />
+            <format attr='enabled' id='tab_arealabels' value='false' />
+            <format attr='enabled' id='tab_msabounds' value='false' />
+            <format attr='enabled' id='tab_msalabels' value='false' />
+            <format attr='enabled' id='181657' value='false' />
+            <format attr='enabled' id='181658' value='false' />
+            <format attr='enabled' id='181686' value='false' />
+            <format attr='enabled' id='181708' value='false' />
+            <format attr='enabled' id='181730' value='false' />
+            <format attr='enabled' id='181732' value='false' />
+            <format attr='enabled' id='181795' value='false' />
+            <format attr='enabled' id='181796' value='false' />
+            <format attr='enabled' id='181794' value='false' />
+            <format attr='enabled' id='181866' value='false' />
+            <format attr='enabled' id='181797' value='false' />
+            <format attr='enabled' id='181793' value='false' />
+            <format attr='enabled' id='181799' value='false' />
+            <format attr='enabled' id='181798' value='false' />
+            <format attr='enabled' id='182057' value='false' />
+            <format attr='enabled' id='182484' value='false' />
+            <format attr='enabled' id='182485' value='false' />
+            <format attr='enabled' id='182486' value='false' />
+            <format attr='enabled' id='181661' value='false' />
+            <format attr='enabled' id='181662' value='false' />
+            <format attr='enabled' id='181951' value='false' />
+            <format attr='enabled' id='182071' value='false' />
+            <format attr='enabled' id='182099' value='false' />
+            <format attr='enabled' id='181665' value='false' />
+            <format attr='enabled' id='181666' value='false' />
+            <format attr='enabled' id='182041' value='false' />
+            <format attr='enabled' id='182048' value='false' />
+            <format attr='enabled' id='182002' value='false' />
+            <format attr='enabled' id='182003' value='false' />
+            <format attr='enabled' id='181943' value='false' />
+          </style-rule>
+          <style-rule element='map'>
+            <format attr='washout' value='0' />
+            <format attr='map-style' value='tableau-light-gray' />
+            <format attr='wrap' value='false' />
+          </style-rule>
+          <style-rule element='map-data-layer'>
+            <format attr='palette' value='tableau-map-blue-green-light' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Heatmap' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:State/Province:nk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg (dane1):qk]' />
+              <text column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]' />
+            </encodings>
+            <customized-tooltip>
+              <formatted-text>
+                <run bold='true' fontcolor='#e15759' fontname='Verdana' fontsize='12'>&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]&gt; </run>
+                <run fontcolor='#e15759' fontname='Verdana' italic='true'>&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:State/Province:nk]&gt;, &lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnia temperatura[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp (dane1):qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnie ciśnienie atmosferyczne[hPa]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg (dane1):qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnia prędkość wiatru[km/h]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind (dane1):qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnie opady[mm]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip (dane1):qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnia temperatura punktu rosy[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt (dane1):qk]&gt;</run>
+                <run>Æ&#10;</run>
+                <run fontcolor='#787878'>Średnia widoczność[km]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis (dane1):qk]&gt;</run>
+              </formatted-text>
+            </customized-tooltip>
+            <style>
+              <style-rule element='cell'>
+                <format attr='vertical-align' value='center' />
+                <format attr='wrap' value='auto' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='datalabel'>
+                <format attr='color-mode' value='auto' />
+                <format attr='font-family' value='Tableau Book' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#0055ff' />
+                <format attr='has-stroke' value='true' />
+                <format attr='stroke-color' value='#000000' />
+                <format attr='size' value='2.9502761363983154' />
+                <format attr='density-kernel-size' value='1.4832596778869629' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.173pbqz0cou74v1egr11z0yli11o].[Latitude (generated)]</rows>
+        <cols>[federated.173pbqz0cou74v1egr11z0yli11o].[Longitude (generated)]</cols>
+      </table>
+      <simple-id uuid='{18350803-4EC8-4F13-822B-E8A77FD5B67F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' maximized='true' name='Sheet 1'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card AVG='true' KURTOSIS='false' MAX='true' MEDIAN='true' MIN='true' QUART1='false' QUART3='false' SKEWNESS='false' STDEV='false' SUM='true' type='summary' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:avg_dewpt:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:avg_hg:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:avg_temp:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:avg_vis:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:avg_wind:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:high_hg:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:high_temp:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:low_temp:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:low_vis:nk]</field>
+            <field>[federated.173pbqz0cou74v1egr11z0yli11o].[none:month:qk]</field>
+          </color-one-way>
+        </highlight>
+        <default-map-tool-selection tool='1' />
+      </viewpoint>
+      <simple-id uuid='{0E714FBA-9F83-41B0-BCCC-007B5457CBC0}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name='Sheet 1' width='192'>
+      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
+      AAAASUVORK5CYII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
