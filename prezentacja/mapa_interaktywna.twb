@@ -18,73 +18,27 @@
           <named-connection caption='Wspolrzedne' name='excel-direct.0wvea0r07j16g816uz8ki0hd0x52'>
             <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/Wspolrzedne.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
-          <named-connection caption='dane' name='excel-direct.0mwh7851fx89dx16r9ohx1008kv0'>
+          <named-connection caption='dane' name='excel-direct.0cymtse1aistrj18rft6y036pfr4'>
             <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/dane.xlsx' interpretationMode='0' password='' server='' validate='no' />
-          </named-connection>
-          <named-connection caption='dane1' name='excel-direct.0lzmt2l1waensk1cfr14o0tpd2n3'>
-            <connection class='excel-direct' cleaning='no' compat='no' dataRefreshTime='' filename='j:/Desktop/Projekt-eksploracyjna_analiza_danych/dane/dane1.xlsx' interpretationMode='0' password='' server='' validate='no' />
           </named-connection>
         </named-connections>
         <relation join='full' type='join'>
           <clause type='join'>
             <expression op='='>
               <expression op='[współrzędne].[City]' />
-              <expression op='[dane1].[city]' />
+              <expression op='[dane].[city]' />
             </expression>
           </clause>
-          <relation join='full' type='join'>
-            <clause type='join'>
-              <expression op='='>
-                <expression op='[współrzędne].[City]' />
-                <expression op='[dane].[city]' />
-              </expression>
-            </clause>
-            <relation connection='excel-direct.0wvea0r07j16g816uz8ki0hd0x52' name='współrzędne' table='[Arkusz1$]' type='table'>
-              <columns gridOrigin='A1:E6:no:A1:E6:0' header='yes' outcome='6'>
-                <column datatype='string' name='Country (Name)' ordinal='0' />
-                <column datatype='string' name='State/Province' ordinal='1' />
-                <column datatype='string' name='City' ordinal='2' />
-                <column datatype='string' name='Latitude' ordinal='3' />
-                <column datatype='string' name='Longitude' ordinal='4' />
-              </columns>
-            </relation>
-            <relation connection='excel-direct.0mwh7851fx89dx16r9ohx1008kv0' name='dane' table='[dane$]' type='table'>
-              <columns gridOrigin='A1:AE3656:no:A1:AE3656:0' header='yes' outcome='2'>
-                <column datatype='integer' name='F1' ordinal='0' />
-                <column datatype='string' name='city' ordinal='1' />
-                <column datatype='date' name='date' ordinal='2' />
-                <column datatype='integer' name='year' ordinal='3' />
-                <column datatype='integer' name='month' ordinal='4' />
-                <column datatype='integer' name='day' ordinal='5' />
-                <column datatype='real' name='high_temp' ordinal='6' />
-                <column datatype='real' name='avg_temp' ordinal='7' />
-                <column datatype='real' name='low_temp' ordinal='8' />
-                <column datatype='real' name='high_dewpt' ordinal='9' />
-                <column datatype='real' name='avg_dewpt' ordinal='10' />
-                <column datatype='real' name='low_dewpt' ordinal='11' />
-                <column datatype='integer' name='high_humidity' ordinal='12' />
-                <column datatype='integer' name='avg_humidity' ordinal='13' />
-                <column datatype='integer' name='low_humidity' ordinal='14' />
-                <column datatype='real' name='high_hg' ordinal='15' />
-                <column datatype='real' name='avg_hg' ordinal='16' />
-                <column datatype='real' name='low_hg' ordinal='17' />
-                <column datatype='real' name='high_vis' ordinal='18' />
-                <column datatype='real' name='avg_vis' ordinal='19' />
-                <column datatype='real' name='low_vis' ordinal='20' />
-                <column datatype='real' name='high_wind' ordinal='21' />
-                <column datatype='real' name='avg_wind' ordinal='22' />
-                <column datatype='real' name='max_wind_gust' ordinal='23' />
-                <column datatype='real' name='precip' ordinal='24' />
-                <column datatype='string' name='events' ordinal='25' />
-                <column datatype='integer' name='Rain' ordinal='26' />
-                <column datatype='integer' name='Fog' ordinal='27' />
-                <column datatype='integer' name='Thunderstorm' ordinal='28' />
-                <column datatype='integer' name='Snow' ordinal='29' />
-                <column datatype='integer' name='Hail' ordinal='30' />
-              </columns>
-            </relation>
+          <relation connection='excel-direct.0wvea0r07j16g816uz8ki0hd0x52' name='współrzędne' table='[Arkusz1$]' type='table'>
+            <columns gridOrigin='A1:E6:no:A1:E6:0' header='yes' outcome='6'>
+              <column datatype='string' name='Country (Name)' ordinal='0' />
+              <column datatype='string' name='State/Province' ordinal='1' />
+              <column datatype='string' name='City' ordinal='2' />
+              <column datatype='string' name='Latitude' ordinal='3' />
+              <column datatype='string' name='Longitude' ordinal='4' />
+            </columns>
           </relation>
-          <relation connection='excel-direct.0lzmt2l1waensk1cfr14o0tpd2n3' name='dane1' table='[dane$]' type='table'>
+          <relation connection='excel-direct.0cymtse1aistrj18rft6y036pfr4' name='dane' table='[dane$]' type='table'>
             <columns gridOrigin='A1:AD3656:no:A1:AD3656:0' header='yes' outcome='6'>
               <column datatype='string' name='city' ordinal='0' />
               <column datatype='date' name='date' ordinal='1' />
@@ -119,74 +73,6 @@
             </columns>
           </relation>
         </relation>
-        <cols>
-          <map key='[City]' value='[współrzędne].[City]' />
-          <map key='[Country (Name)]' value='[współrzędne].[Country (Name)]' />
-          <map key='[F1]' value='[dane].[F1]' />
-          <map key='[Fog (dane1)]' value='[dane1].[Fog]' />
-          <map key='[Fog]' value='[dane].[Fog]' />
-          <map key='[Hail (dane1)]' value='[dane1].[Hail]' />
-          <map key='[Hail]' value='[dane].[Hail]' />
-          <map key='[Latitude]' value='[współrzędne].[Latitude]' />
-          <map key='[Longitude]' value='[współrzędne].[Longitude]' />
-          <map key='[Rain (dane1)]' value='[dane1].[Rain]' />
-          <map key='[Rain]' value='[dane].[Rain]' />
-          <map key='[Snow (dane1)]' value='[dane1].[Snow]' />
-          <map key='[Snow]' value='[dane].[Snow]' />
-          <map key='[State/Province]' value='[współrzędne].[State/Province]' />
-          <map key='[Thunderstorm (dane1)]' value='[dane1].[Thunderstorm]' />
-          <map key='[Thunderstorm]' value='[dane].[Thunderstorm]' />
-          <map key='[avg_dewpt (dane1)]' value='[dane1].[avg_dewpt]' />
-          <map key='[avg_dewpt]' value='[dane].[avg_dewpt]' />
-          <map key='[avg_hg (dane1)]' value='[dane1].[avg_hg]' />
-          <map key='[avg_hg]' value='[dane].[avg_hg]' />
-          <map key='[avg_humidity (dane1)]' value='[dane1].[avg_humidity]' />
-          <map key='[avg_humidity]' value='[dane].[avg_humidity]' />
-          <map key='[avg_temp (dane1)]' value='[dane1].[avg_temp]' />
-          <map key='[avg_temp]' value='[dane].[avg_temp]' />
-          <map key='[avg_vis (dane1)]' value='[dane1].[avg_vis]' />
-          <map key='[avg_vis]' value='[dane].[avg_vis]' />
-          <map key='[avg_wind (dane1)]' value='[dane1].[avg_wind]' />
-          <map key='[avg_wind]' value='[dane].[avg_wind]' />
-          <map key='[city (dane1)]' value='[dane1].[city]' />
-          <map key='[city]' value='[dane].[city]' />
-          <map key='[date (dane1)]' value='[dane1].[date]' />
-          <map key='[date]' value='[dane].[date]' />
-          <map key='[day (dane1)]' value='[dane1].[day]' />
-          <map key='[day]' value='[dane].[day]' />
-          <map key='[events (dane1)]' value='[dane1].[events]' />
-          <map key='[events]' value='[dane].[events]' />
-          <map key='[high_dewpt (dane1)]' value='[dane1].[high_dewpt]' />
-          <map key='[high_dewpt]' value='[dane].[high_dewpt]' />
-          <map key='[high_hg (dane1)]' value='[dane1].[high_hg]' />
-          <map key='[high_hg]' value='[dane].[high_hg]' />
-          <map key='[high_humidity (dane1)]' value='[dane1].[high_humidity]' />
-          <map key='[high_humidity]' value='[dane].[high_humidity]' />
-          <map key='[high_temp (dane1)]' value='[dane1].[high_temp]' />
-          <map key='[high_temp]' value='[dane].[high_temp]' />
-          <map key='[high_vis (dane1)]' value='[dane1].[high_vis]' />
-          <map key='[high_vis]' value='[dane].[high_vis]' />
-          <map key='[high_wind (dane1)]' value='[dane1].[high_wind]' />
-          <map key='[high_wind]' value='[dane].[high_wind]' />
-          <map key='[low_dewpt (dane1)]' value='[dane1].[low_dewpt]' />
-          <map key='[low_dewpt]' value='[dane].[low_dewpt]' />
-          <map key='[low_hg (dane1)]' value='[dane1].[low_hg]' />
-          <map key='[low_hg]' value='[dane].[low_hg]' />
-          <map key='[low_humidity (dane1)]' value='[dane1].[low_humidity]' />
-          <map key='[low_humidity]' value='[dane].[low_humidity]' />
-          <map key='[low_temp (dane1)]' value='[dane1].[low_temp]' />
-          <map key='[low_temp]' value='[dane].[low_temp]' />
-          <map key='[low_vis (dane1)]' value='[dane1].[low_vis]' />
-          <map key='[low_vis]' value='[dane].[low_vis]' />
-          <map key='[max_wind_gust (dane1)]' value='[dane1].[max_wind_gust]' />
-          <map key='[max_wind_gust]' value='[dane].[max_wind_gust]' />
-          <map key='[month (dane1)]' value='[dane1].[month]' />
-          <map key='[month]' value='[dane].[month]' />
-          <map key='[precip (dane1)]' value='[dane1].[precip]' />
-          <map key='[precip]' value='[dane].[precip]' />
-          <map key='[year (dane1)]' value='[dane1].[year]' />
-          <map key='[year]' value='[dane].[year]' />
-        </cols>
         <metadata-records>
           <metadata-record class='column'>
             <remote-name>Country (Name)</remote-name>
@@ -278,26 +164,12 @@
             </attributes>
           </metadata-record>
           <metadata-record class='column'>
-            <remote-name>F1</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[F1]</local-name>
-            <parent-name>[dane]</parent-name>
-            <remote-alias>F1</remote-alias>
-            <ordinal>5</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
             <remote-name>city</remote-name>
             <remote-type>130</remote-type>
             <local-name>[city]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>city</remote-alias>
-            <ordinal>6</ordinal>
+            <ordinal>5</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -312,7 +184,7 @@
             <local-name>[date]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>date</remote-alias>
-            <ordinal>7</ordinal>
+            <ordinal>6</ordinal>
             <local-type>date</local-type>
             <aggregation>Year</aggregation>
             <contains-null>true</contains-null>
@@ -326,7 +198,7 @@
             <local-name>[year]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>year</remote-alias>
-            <ordinal>8</ordinal>
+            <ordinal>7</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -340,7 +212,7 @@
             <local-name>[month]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>month</remote-alias>
-            <ordinal>9</ordinal>
+            <ordinal>8</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -354,7 +226,7 @@
             <local-name>[day]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>day</remote-alias>
-            <ordinal>10</ordinal>
+            <ordinal>9</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -368,7 +240,7 @@
             <local-name>[high_temp]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_temp</remote-alias>
-            <ordinal>11</ordinal>
+            <ordinal>10</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -383,7 +255,7 @@
             <local-name>[avg_temp]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_temp</remote-alias>
-            <ordinal>12</ordinal>
+            <ordinal>11</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -398,7 +270,7 @@
             <local-name>[low_temp]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>low_temp</remote-alias>
-            <ordinal>13</ordinal>
+            <ordinal>12</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -413,7 +285,7 @@
             <local-name>[high_dewpt]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_dewpt</remote-alias>
-            <ordinal>14</ordinal>
+            <ordinal>13</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -428,7 +300,7 @@
             <local-name>[avg_dewpt]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_dewpt</remote-alias>
-            <ordinal>15</ordinal>
+            <ordinal>14</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -443,7 +315,7 @@
             <local-name>[low_dewpt]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>low_dewpt</remote-alias>
-            <ordinal>16</ordinal>
+            <ordinal>15</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -458,7 +330,7 @@
             <local-name>[high_humidity]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_humidity</remote-alias>
-            <ordinal>17</ordinal>
+            <ordinal>16</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -472,7 +344,7 @@
             <local-name>[avg_humidity]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_humidity</remote-alias>
-            <ordinal>18</ordinal>
+            <ordinal>17</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -486,7 +358,7 @@
             <local-name>[low_humidity]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>low_humidity</remote-alias>
-            <ordinal>19</ordinal>
+            <ordinal>18</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -500,7 +372,7 @@
             <local-name>[high_hg]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_hg</remote-alias>
-            <ordinal>20</ordinal>
+            <ordinal>19</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -515,7 +387,7 @@
             <local-name>[avg_hg]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_hg</remote-alias>
-            <ordinal>21</ordinal>
+            <ordinal>20</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -530,7 +402,7 @@
             <local-name>[low_hg]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>low_hg</remote-alias>
-            <ordinal>22</ordinal>
+            <ordinal>21</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -545,7 +417,7 @@
             <local-name>[high_vis]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_vis</remote-alias>
-            <ordinal>23</ordinal>
+            <ordinal>22</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -560,7 +432,7 @@
             <local-name>[avg_vis]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_vis</remote-alias>
-            <ordinal>24</ordinal>
+            <ordinal>23</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -575,7 +447,7 @@
             <local-name>[low_vis]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>low_vis</remote-alias>
-            <ordinal>25</ordinal>
+            <ordinal>24</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -590,7 +462,7 @@
             <local-name>[high_wind]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>high_wind</remote-alias>
-            <ordinal>26</ordinal>
+            <ordinal>25</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -605,7 +477,7 @@
             <local-name>[avg_wind]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>avg_wind</remote-alias>
-            <ordinal>27</ordinal>
+            <ordinal>26</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -620,7 +492,7 @@
             <local-name>[max_wind_gust]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>max_wind_gust</remote-alias>
-            <ordinal>28</ordinal>
+            <ordinal>27</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -635,7 +507,7 @@
             <local-name>[precip]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>precip</remote-alias>
-            <ordinal>29</ordinal>
+            <ordinal>28</ordinal>
             <local-type>real</local-type>
             <aggregation>Sum</aggregation>
             <precision>15</precision>
@@ -650,7 +522,7 @@
             <local-name>[events]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>events</remote-alias>
-            <ordinal>30</ordinal>
+            <ordinal>29</ordinal>
             <local-type>string</local-type>
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
@@ -665,7 +537,7 @@
             <local-name>[Rain]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>Rain</remote-alias>
-            <ordinal>31</ordinal>
+            <ordinal>30</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -679,7 +551,7 @@
             <local-name>[Fog]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>Fog</remote-alias>
-            <ordinal>32</ordinal>
+            <ordinal>31</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -693,7 +565,7 @@
             <local-name>[Thunderstorm]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>Thunderstorm</remote-alias>
-            <ordinal>33</ordinal>
+            <ordinal>32</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -707,7 +579,7 @@
             <local-name>[Snow]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>Snow</remote-alias>
-            <ordinal>34</ordinal>
+            <ordinal>33</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -721,7 +593,7 @@
             <local-name>[Hail]</local-name>
             <parent-name>[dane]</parent-name>
             <remote-alias>Hail</remote-alias>
-            <ordinal>35</ordinal>
+            <ordinal>34</ordinal>
             <local-type>integer</local-type>
             <aggregation>Sum</aggregation>
             <contains-null>true</contains-null>
@@ -737,459 +609,7 @@
             <aggregation>Count</aggregation>
             <contains-null>true</contains-null>
             <attributes>
-              <attribute datatype='integer' name='context'>1</attribute>
-              <attribute datatype='string' name='gridOrigin'>&quot;A1:AE3656:no:A1:AE3656:0&quot;</attribute>
-              <attribute datatype='boolean' name='header'>true</attribute>
-              <attribute datatype='integer' name='outcome'>2</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>city</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[city (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>city</remote-alias>
-            <ordinal>36</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LPL_RPL_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>date</remote-name>
-            <remote-type>7</remote-type>
-            <local-name>[date (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>date</remote-alias>
-            <ordinal>37</ordinal>
-            <local-type>date</local-type>
-            <aggregation>Year</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>year</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[year (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>year</remote-alias>
-            <ordinal>38</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>month</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[month (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>month</remote-alias>
-            <ordinal>39</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>day</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[day (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>day</remote-alias>
-            <ordinal>40</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_temp</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[high_temp (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_temp</remote-alias>
-            <ordinal>41</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_temp</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avg_temp (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_temp</remote-alias>
-            <ordinal>42</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>low_temp</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[low_temp (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>low_temp</remote-alias>
-            <ordinal>43</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_dewpt</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[high_dewpt (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_dewpt</remote-alias>
-            <ordinal>44</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_dewpt</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avg_dewpt (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_dewpt</remote-alias>
-            <ordinal>45</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>low_dewpt</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[low_dewpt (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>low_dewpt</remote-alias>
-            <ordinal>46</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_humidity</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[high_humidity (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_humidity</remote-alias>
-            <ordinal>47</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_humidity</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[avg_humidity (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_humidity</remote-alias>
-            <ordinal>48</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>low_humidity</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[low_humidity (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>low_humidity</remote-alias>
-            <ordinal>49</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_hg</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[high_hg (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_hg</remote-alias>
-            <ordinal>50</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_hg</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avg_hg (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_hg</remote-alias>
-            <ordinal>51</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>low_hg</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[low_hg (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>low_hg</remote-alias>
-            <ordinal>52</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_vis</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[high_vis (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_vis</remote-alias>
-            <ordinal>53</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_vis</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avg_vis (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_vis</remote-alias>
-            <ordinal>54</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>low_vis</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[low_vis (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>low_vis</remote-alias>
-            <ordinal>55</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>high_wind</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[high_wind (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>high_wind</remote-alias>
-            <ordinal>56</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>avg_wind</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[avg_wind (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>avg_wind</remote-alias>
-            <ordinal>57</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>max_wind_gust</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[max_wind_gust (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>max_wind_gust</remote-alias>
-            <ordinal>58</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>precip</remote-name>
-            <remote-type>5</remote-type>
-            <local-name>[precip (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>precip</remote-alias>
-            <ordinal>59</ordinal>
-            <local-type>real</local-type>
-            <aggregation>Sum</aggregation>
-            <precision>15</precision>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>events</remote-name>
-            <remote-type>130</remote-type>
-            <local-name>[events (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>events</remote-alias>
-            <ordinal>60</ordinal>
-            <local-type>string</local-type>
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <collation flag='1' name='LPL_RPL_S2' />
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Rain</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Rain (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>Rain</remote-alias>
-            <ordinal>61</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Fog</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Fog (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>Fog</remote-alias>
-            <ordinal>62</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Thunderstorm</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Thunderstorm (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>Thunderstorm</remote-alias>
-            <ordinal>63</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Snow</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Snow (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>Snow</remote-alias>
-            <ordinal>64</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='column'>
-            <remote-name>Hail</remote-name>
-            <remote-type>20</remote-type>
-            <local-name>[Hail (dane1)]</local-name>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias>Hail</remote-alias>
-            <ordinal>65</ordinal>
-            <local-type>integer</local-type>
-            <aggregation>Sum</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
-            </attributes>
-          </metadata-record>
-          <metadata-record class='capability'>
-            <remote-name />
-            <remote-type>0</remote-type>
-            <parent-name>[dane1]</parent-name>
-            <remote-alias />
-            <aggregation>Count</aggregation>
-            <contains-null>true</contains-null>
-            <attributes>
-              <attribute datatype='integer' name='context'>1</attribute>
+              <attribute datatype='integer' name='context'>4</attribute>
               <attribute datatype='string' name='gridOrigin'>&quot;A1:AD3656:no:A1:AD3656:0&quot;</attribute>
               <attribute datatype='boolean' name='header'>true</attribute>
               <attribute datatype='integer' name='outcome'>6</attribute>
@@ -1198,12 +618,6 @@
         </metadata-records>
       </connection>
       <aliases enabled='yes' />
-      <column caption='ciśnienie[hPa]' datatype='real' name='[Calculation_1847038853453783040]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[avg_hg]/2.54*33.8638' />
-      </column>
-      <column caption='widoczność[km]' datatype='real' name='[Calculation_1847038853454962689]' role='measure' type='quantitative'>
-        <calculation class='tableau' formula='[avg_vis]/1000' />
-      </column>
       <column datatype='string' name='[City]' role='dimension' semantic-role='[City].[Name]' type='nominal'>
         <semantic-values semantic-role='[Geographical].[Latitude]'>
           <semantic-value key='&quot;Beijing&quot;' value='39.549999999999997' />
@@ -1222,29 +636,9 @@
         <calculation class='tableau' formula='1' />
       </column>
       <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-      <column caption='punkt rosy[st. C] (dane1)' datatype='real' name='[avg_dewpt (dane1)]' role='measure' type='quantitative' />
-      <column caption='punkt rosy[st. C]' datatype='real' name='[avg_dewpt]' role='dimension' type='ordinal' />
-      <column caption='ciśnienie[hPa] (dane1)' datatype='real' name='[avg_hg (dane1)]' role='measure' type='quantitative' />
-      <column caption='ciśnienie[cm sł Hg]' datatype='real' name='[avg_hg]' role='dimension' type='ordinal' />
-      <column caption='wilgotność[%] (dane1)' datatype='integer' name='[avg_humidity (dane1)]' role='measure' type='quantitative' />
-      <column caption='wilgotność[%]' datatype='integer' name='[avg_humidity]' role='measure' type='quantitative' />
-      <column caption='temperatura[st. C] (dane1)' datatype='real' name='[avg_temp (dane1)]' role='measure' type='quantitative' />
-      <column caption='temperatura[st. C]' datatype='real' name='[avg_temp]' role='dimension' type='ordinal' />
-      <column caption='widoczność[km] (dane1)' datatype='real' name='[avg_vis (dane1)]' role='measure' type='quantitative' />
-      <column caption='widoczność[m]' datatype='real' name='[avg_vis]' role='dimension' type='ordinal' />
-      <column caption='prędkość wiatru[km/h] (dane1)' datatype='real' name='[avg_wind (dane1)]' role='measure' type='quantitative' />
-      <column caption='prędkość wiatru[km/h]' datatype='real' name='[avg_wind]' role='dimension' type='ordinal' />
-      <column datatype='string' name='[city (dane1)]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
       <column datatype='string' name='[city]' role='dimension' semantic-role='[City].[Name]' type='nominal' />
-      <column datatype='integer' name='[day (dane1)]' role='dimension' type='quantitative' />
       <column datatype='integer' name='[day]' role='dimension' type='quantitative' />
-      <column caption='największy podmuch wiatru[km/h] (dane1)' datatype='real' name='[max_wind_gust (dane1)]' role='measure' type='quantitative' />
-      <column caption='największy podmuch wiatru[km/h]' datatype='real' name='[max_wind_gust]' role='measure' type='quantitative' />
-      <column datatype='integer' name='[month (dane1)]' role='dimension' type='quantitative' />
       <column datatype='integer' name='[month]' role='dimension' type='quantitative' />
-      <column caption='opady[mm] (dane1)' datatype='real' name='[precip (dane1)]' role='measure' type='quantitative' />
-      <column caption='opady[mm]' datatype='real' name='[precip]' role='measure' type='quantitative' />
-      <column datatype='integer' name='[year (dane1)]' role='dimension' type='quantitative' />
       <column datatype='integer' name='[year]' role='dimension' type='quantitative' />
       <drill-paths>
         <drill-path name='Country (Name), State/Province, City'>
@@ -1253,7 +647,7 @@
           <field>[City]</field>
         </drill-path>
       </drill-paths>
-      <layout dim-ordering='alphabetic' dim-percentage='0.714106' measure-ordering='alphabetic' measure-percentage='0.285894' show-structure='true' />
+      <layout dim-ordering='alphabetic' dim-percentage='0.536627' measure-ordering='alphabetic' measure-percentage='0.463373' show-structure='true' />
       <semantic-values>
         <semantic-value key='[Country].[Name]' value='&quot;Poland&quot;' />
       </semantic-values>
@@ -1366,21 +760,21 @@
               </semantic-values>
             </column>
             <column datatype='string' name='[State/Province]' role='dimension' semantic-role='[State].[Name]' type='nominal' />
-            <column-instance column='[avg_dewpt (dane1)]' derivation='Avg' name='[avg:avg_dewpt (dane1):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[avg_hg (dane1)]' derivation='Avg' name='[avg:avg_hg (dane1):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[avg_temp (dane1)]' derivation='Avg' name='[avg:avg_temp (dane1):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[avg_vis (dane1)]' derivation='Avg' name='[avg:avg_vis (dane1):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[avg_wind (dane1)]' derivation='Avg' name='[avg:avg_wind (dane1):qk]' pivot='key' type='quantitative' />
-            <column-instance column='[precip (dane1)]' derivation='Avg' name='[avg:precip (dane1):qk]' pivot='key' type='quantitative' />
-            <column caption='punkt rosy[st. C] (dane1)' datatype='real' name='[avg_dewpt (dane1)]' role='measure' type='quantitative' />
-            <column caption='ciśnienie[hPa] (dane1)' datatype='real' name='[avg_hg (dane1)]' role='measure' type='quantitative' />
-            <column caption='temperatura[st. C] (dane1)' datatype='real' name='[avg_temp (dane1)]' role='measure' type='quantitative' />
-            <column caption='widoczność[km] (dane1)' datatype='real' name='[avg_vis (dane1)]' role='measure' type='quantitative' />
-            <column caption='prędkość wiatru[km/h] (dane1)' datatype='real' name='[avg_wind (dane1)]' role='measure' type='quantitative' />
+            <column-instance column='[avg_dewpt]' derivation='Avg' name='[avg:avg_dewpt:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_hg]' derivation='Avg' name='[avg:avg_hg:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_temp]' derivation='Avg' name='[avg:avg_temp:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_vis]' derivation='Avg' name='[avg:avg_vis:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[avg_wind]' derivation='Avg' name='[avg:avg_wind:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[precip]' derivation='Avg' name='[avg:precip:qk]' pivot='key' type='quantitative' />
+            <column datatype='real' name='[avg_dewpt]' role='measure' type='quantitative' />
+            <column datatype='real' name='[avg_hg]' role='measure' type='quantitative' />
+            <column datatype='real' name='[avg_temp]' role='measure' type='quantitative' />
+            <column datatype='real' name='[avg_vis]' role='measure' type='quantitative' />
+            <column datatype='real' name='[avg_wind]' role='measure' type='quantitative' />
             <column-instance column='[City]' derivation='None' name='[none:City:nk]' pivot='key' type='nominal' />
             <column-instance column='[Country (Name)]' derivation='None' name='[none:Country (Name):nk]' pivot='key' type='nominal' />
             <column-instance column='[State/Province]' derivation='None' name='[none:State/Province:nk]' pivot='key' type='nominal' />
-            <column caption='opady[mm] (dane1)' datatype='real' name='[precip (dane1)]' role='measure' type='quantitative' />
+            <column datatype='real' name='[precip]' role='measure' type='quantitative' />
           </datasource-dependencies>
           <aggregation value='true' />
         </view>
@@ -1474,30 +868,29 @@
               <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]' />
               <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:State/Province:nk]' />
               <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp (dane1):qk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt (dane1):qk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis (dane1):qk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind (dane1):qk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip (dane1):qk]' />
-              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg (dane1):qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp:qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg:qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind:qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip:qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt:qk]' />
+              <lod column='[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis:qk]' />
               <text column='[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]' />
             </encodings>
             <customized-tooltip>
               <formatted-text>
-                <run bold='true' fontcolor='#e15759' fontname='Verdana' fontsize='12'>&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]&gt; </run>
-                <run fontcolor='#e15759' fontname='Verdana' italic='true'>&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:State/Province:nk]&gt;, &lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]&gt;</run>
+                <run bold='true' fontcolor='#ff0000'>&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:City:nk]&gt; &lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:State/Province:nk]&gt;, &lt;[federated.173pbqz0cou74v1egr11z0yli11o].[none:Country (Name):nk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnia temperatura[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnia temperatura[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_temp:qk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnie ciśnienie atmosferyczne[hPa]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnie ciśnienie atmosferyczne[hPa]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_hg:qk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnia prędkość wiatru[km/h]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnia prędkość wiatru[km/h]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_wind:qk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnie opady[mm]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnie opady[mm]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:precip:qk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnia temperatura punktu rosy[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnia temperatura punktu rosy[st. C]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_dewpt:qk]&gt;</run>
                 <run>Æ&#10;</run>
-                <run fontcolor='#787878'>Średnia widoczność[km]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis (dane1):qk]&gt;</run>
+                <run fontcolor='#000000'>Średnia widoczność[km]:&#9;&lt;[federated.173pbqz0cou74v1egr11z0yli11o].[avg:avg_vis:qk]&gt;</run>
               </formatted-text>
             </customized-tooltip>
             <style>
@@ -1581,277 +974,273 @@
   <thumbnails>
     <thumbnail height='192' name='Sheet 1' width='192'>
       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
-      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
-      AAAASUVORK5CYII=
+      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
     </thumbnail>
   </thumbnails>
 </workbook>
