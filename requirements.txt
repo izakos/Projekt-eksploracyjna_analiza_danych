@@ -1,7 +1,7 @@
 ggplot
 matplotlib
 numpy
-pandas
+pandas==0.23.0
 pandas_profiling
 plotly
 seaborn
