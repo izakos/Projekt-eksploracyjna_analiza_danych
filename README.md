@@ -17,7 +17,7 @@ Liczba kolumn wynosi 25, natomiast wierszy jest 3655.
 
 Obserwacje w kolumnach przed dokonaną analizą oznaczają odpowiednio:
 
-city                                      - nazwa miasta
+**city**                                      - nazwa miasta
 
 date                                      - data
 
