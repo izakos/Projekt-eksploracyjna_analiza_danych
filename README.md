@@ -19,26 +19,26 @@ Obserwacje w kolumnach przed dokonaną analizą oznaczają odpowiednio:
 
 **city**                                      - nazwa miasta
 
-date                                      - data
+**date**                                      - data
 
-year                                      - rok numeryczny
+**year**                                      - rok numeryczny
 
-month                                     - numeryczny miesiąc
+**month**                                     - numeryczny miesiąc
 
-day                                       - numeryczny dzień
+**day**                                       - numeryczny dzień
 
-high_temp, avg_temp, low_temp             - wysoka, średnia i niska temperatura w ciągu dnia w stopniach F
+**high_temp, avg_temp, low_temp**             - wysoka, średnia i niska temperatura w ciągu dnia w stopniach F
 
-high_dewpt, avg_dewpt, low_dewpt          - wysoki, średni i niski punkt rosy w ciągu dnia w stopniach F
+**high_dewpt, avg_dewpt, low_dewpt**          - wysoki, średni i niski punkt rosy w ciągu dnia w stopniach F
 
-high_humidity, avg_humidity, low_humidity - wysoka, średnia i niska wilgotność względna
+**high_humidity, avg_humidity, low_humidity** - wysoka, średnia i niska wilgotność względna
 
-high_hg, avg_hg, low_hg                   - wysokie, średnie i niskie ciśnienie na poziomie morza w calach rtęci
+**high_hg, avg_hg, low_hg**                   - wysokie, średnie i niskie ciśnienie na poziomie morza w calach rtęci
 
-high_vis, avg_vis, low_vis                - wysoka, średnia i niska widoczność w ciągu dnia w milach
+**high_vis, avg_vis, low_vis**                - wysoka, średnia i niska widoczność w ciągu dnia w milach
 
-high_wind, avg_wind, low_wind             - wysoka, średnia i niska prędkość wiatru na dzień w mph
+**high_wind, avg_wind, low_wind**             - wysoka, średnia i niska prędkość wiatru na dzień w mph
 
-precip                                    - opady na dzień - dolina postaci; T oznacza „ilość śladową”
+**precip**                                    - opady na dzień - dolina postaci; T oznacza „ilość śladową”
 
-events                                    - ciąg znaków określający zdarzenia pogodowe w danym dniu (deszcz, mgła, śnieg itp.)
+**events**                                   - ciąg znaków określający zdarzenia pogodowe w danym dniu (deszcz, mgła, śnieg itp.)
